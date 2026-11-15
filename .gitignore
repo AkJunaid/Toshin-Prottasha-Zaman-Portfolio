@@ -1,0 +1,6 @@
+# Portfolio-only repository: ignore everything except the files listed below.
+/*
+!/.gitignore
+!/portfolio.html
+!/images/
+!/Toshin_Prottasha_Zaman_CV_web.pdf

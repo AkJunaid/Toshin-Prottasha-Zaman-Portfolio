@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toshin Prottasha Zaman | Microbiology Portfolio</title>
+<meta name="description" content="Microbiology graduate specializing in clinical microbiology, antimicrobial resistance and bacteriophage research.">
+<meta name="theme-color" content="#fff1f6">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c21a62'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%23fff1f6'/%3E%3Ccircle cx='32' cy='32' r='13' fill='none' stroke='%23c21a62' stroke-width='3' stroke-dasharray='2 5' stroke-linecap='round'/%3E%3Ccircle cx='27' cy='27' r='3' fill='%23c21a62'/%3E%3Ccircle cx='38' cy='36' r='3.6' fill='%23ff7eb0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1f6;--ink:#43202f;--mute:#85586c;--line:#f7cddd;--accent:#c21a62;--accent2:#ff7eb0;--tint:#ffe0ec;--glass:rgba(255,249,252,.72)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:17px/1.65 "Nunito",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ background:radial-gradient(900px 500px at 8% -5%,#ffd3e5 0,transparent 60%),radial-gradient(800px 500px at 100% 20%,#ffe3ef 0,transparent 60%),var(--bg);
+ background-attachment:fixed;overflow-x:hidden}
+h1,h2,h3{font-family:"Fredoka","Nunito",system-ui,sans-serif;letter-spacing:.2px}
+a{color:var(--accent)}
+
+/* floating cute microbiology icons */
+.floaters{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.f{position:absolute;left:var(--x);top:var(--y);width:var(--s);height:var(--s);opacity:.95;
+ transform:rotate(var(--r,0deg));animation:float var(--d,8s) ease-in-out infinite;animation-delay:var(--dl,0s);
+ filter:drop-shadow(0 6px 10px rgba(194,26,98,.15))}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-26px) rotate(calc(var(--r,0deg) + 7deg))}}
+.twinkle{animation:twinkle 3.2s ease-in-out infinite;animation-delay:var(--dl,0s)}
+@keyframes twinkle{0%,100%{transform:scale(.7) rotate(var(--r,0deg));opacity:.5}50%{transform:scale(1.15) rotate(calc(var(--r,0deg) + 20deg));opacity:1}}
+
+.layer{position:relative;z-index:1}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.glass{background:var(--glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:26px;box-shadow:0 14px 40px rgba(194,26,98,.08)}
+
+nav{position:sticky;top:12px;z-index:5;margin:12px auto 0;max-width:980px;padding:0 20px}
+nav .bar{display:flex;gap:6px;align-items:center;overflow-x:auto;padding:8px 10px 8px 20px;white-space:nowrap;border-radius:99px;scrollbar-width:none}
+nav .bar::-webkit-scrollbar{display:none}
+nav b{margin-right:auto;font-family:"Fredoka",sans-serif;font-size:18px;color:var(--accent)}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;font-weight:700;padding:7px 13px;border-radius:99px;transition:.25s}
+nav a:hover{background:var(--tint);color:var(--accent)}
+
+.hero{margin-top:28px;padding:36px 36px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;
+ background:radial-gradient(circle,#ffb6d3 0,transparent 70%);opacity:.7;animation:pulse 7s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:32px;position:relative;z-index:1}
+.where{margin:0 0 14px;color:var(--accent);font-weight:700;font-size:15px}
+h1{font-size:clamp(36px,7vw,64px);line-height:1.05;margin:0 0 8px}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.1em}
+.w>span{display:inline-block;background:linear-gradient(90deg,#c21a62,#e0287a,#c21a62);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+ animation:rise .95s cubic-bezier(.2,.8,.2,1) both,shine 6s linear infinite;animation-delay:calc(var(--i)*.14s + .1s),0s}
+@keyframes rise{from{transform:translateY(105%) rotate(4deg);opacity:0}to{transform:none;opacity:1}}
+@keyframes shine{to{background-position:200% center}}
+.role{margin:2px 0 14px;font:600 clamp(19px,2.6vw,25px)/1.3 "Fredoka","Nunito",sans-serif;color:var(--ink);min-height:1.4em}
+.role .rot{color:var(--accent);border-right:3px solid var(--accent2);padding-right:4px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{border-color:transparent}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero .lead,.hero .btns{animation:fadeup .9s .7s cubic-bezier(.2,.8,.2,1) both}
+.hero .btns{animation-delay:.9s}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:30;background:linear-gradient(90deg,var(--accent2),var(--accent));transform-origin:left;transform:scaleX(0)}
+nav .bar{transition:box-shadow .3s,background .3s}
+nav.scrolled .bar{box-shadow:0 12px 34px rgba(194,26,98,.16);background:rgba(255,249,252,.9)}
+nav a.on{background:var(--tint);color:var(--accent)}
+
+.ticker{position:relative;margin:20px 0;padding:14px 0;overflow:hidden;display:flex;align-items:center}
+.tclip{flex:1;min-width:0;overflow:hidden;margin-right:84px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:marq 46s linear infinite}
+.ticker-set{display:flex;align-items:center;flex:none}
+.ticker-set span{font:600 20px "Fredoka","Nunito",sans-serif;color:var(--accent);white-space:nowrap}
+.ticker-set i{width:9px;height:9px;border-radius:50%;background:var(--accent2);margin:0 26px;flex:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+.ticker:hover .ticker-track,.ticker.paused .ticker-track{animation-play-state:paused}
+.tpause{position:absolute;right:12px;top:50%;transform:translateY(-50%);z-index:2;border:1.5px solid var(--accent);background:#fff;color:var(--accent);border-radius:99px;padding:3px 12px;font:700 12px "Nunito",sans-serif;cursor:pointer}
+.tpause:hover{background:var(--tint)}
+.tpause:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* richer scroll reveals */
+.js [data-rv=left]{transform:translateX(-44px)}
+.js [data-rv=right]{transform:translateX(44px)}
+.js [data-rv=zoom]{transform:scale(.94)}
+.js .img-rv{clip-path:inset(0 0 100% 0 round 16px);transition:clip-path 1.1s cubic-bezier(.65,0,.35,1),transform .4s,box-shadow .4s}
+.js .img-rv.in{clip-path:inset(0 0 0 0 round 16px)}
+.js .rv .chips li{opacity:0;transform:scale(.6)}
+.js .rv.in .chips li{animation:pop .55s cubic-bezier(.3,1.5,.5,1) both;animation-delay:calc(var(--c,0)*.07s + .25s)}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+.f{will-change:transform}
+h2 .hw{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em}
+.js h2 .hw>span{display:inline-block;transform:translateY(112%);transition:transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.09s + .15s)}
+.js .rv.in h2 .hw>span,.js h2.in .hw>span{transform:none}
+
+.lead{font-size:18px;color:var(--mute);max-width:640px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{padding:12px 22px;border-radius:99px;text-decoration:none;font-weight:700;font-size:15px;border:2px solid var(--accent);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(194,26,98,.25)}
+.btn.p{background:linear-gradient(135deg,#be185d,#d9246f);color:#fff;border-color:transparent}
+.dp{flex:none;width:230px;height:230px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 5px var(--accent2),0 18px 40px rgba(194,26,98,.3);animation:bob 6s ease-in-out infinite}
+.dp img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+section{margin:20px 0;padding:26px 30px}
+h2{font-size:28px;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 5px var(--tint)}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 22px;margin-bottom:12px;position:relative;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(194,26,98,.13)}
+.card.k{border-left:6px solid var(--accent2)}
+.card h3{margin:0 0 2px;font-size:19px}
+.meta{color:var(--mute);font-size:14px;margin:0 0 8px}
+.card ul{margin:8px 0 0;padding-left:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.grid .card{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.card ul.chips{padding-left:0}
+.chips li{background:var(--tint);border-radius:99px;padding:5px 13px;font-size:14px;font-weight:600;transition:.25s}
+.chips li:hover{background:var(--accent);color:#fff;transform:scale(1.07)}
+
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:26px;align-items:start}
+.split figure{margin:0;overflow:hidden;border-radius:16px;border:3px solid #fff;box-shadow:0 8px 20px rgba(194,26,98,.18);background:#fff}
+.split figure img{display:block;width:100%;height:auto}
+@media(max-width:760px){.split{grid-template-columns:1fr}.split figure{max-width:340px}}
+
+.photos{align-items:start;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
+.photos figure{margin:0;overflow:hidden;border-radius:16px;border:3px solid #fff;box-shadow:0 8px 20px rgba(194,26,98,.18);transform:rotate(var(--tilt,0deg));transition:transform .4s,box-shadow .4s;background:#fff}
+.photos figure:hover{transform:rotate(0) scale(1.03);box-shadow:0 14px 30px rgba(194,26,98,.28)}
+.photos.two{display:flex;gap:14px;align-items:flex-start}
+.photos.two figure{min-width:0}
+@media(max-width:640px){.photos.two{flex-direction:column}.photos.two figure{width:100%;flex:none!important}}
+.photos.one{grid-template-columns:minmax(0,440px);justify-content:center}
+.photos img{display:block;width:100%;height:auto}
+
+.authors{margin:0 0 6px;color:var(--mute);font-size:14px;line-height:1.55}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px;align-items:center}
+.contact .big{font:600 clamp(22px,3vw,30px)/1.3 "Fredoka","Nunito",sans-serif;margin:0;color:var(--ink)}
+.contact .btns{margin-top:22px}
+.tiles{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tile{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 18px;text-decoration:none;color:var(--ink);transition:transform .3s,box-shadow .3s,border-color .3s}
+a.tile:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(194,26,98,.14);border-color:var(--accent2)}
+.tile .ico{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:var(--accent);background:linear-gradient(135deg,var(--tint),#ffd0e2);box-shadow:inset 0 0 0 1px var(--line)}
+.tile .tx{display:flex;flex-direction:column;min-width:0;flex:1}
+.tile small{color:var(--mute);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.tile b{font-size:16px;font-weight:700;overflow-wrap:anywhere}
+.tile .go{flex:none;color:var(--accent);opacity:.5;transition:transform .3s,opacity .3s}
+a.tile:hover .go{transform:translate(3px,-3px);opacity:1}
+@media(max-width:760px){.contact{grid-template-columns:1fr;gap:24px}}
+@media(max-width:480px){.tile{gap:12px;padding:14px}.tile .go{display:none}.tile b{font-size:15px}.tile .ico{width:42px;height:42px}}
+/* keyboard + anchor hardening */
+.skip{position:absolute;left:16px;top:-80px;z-index:20;background:var(--accent);color:#fff;padding:10px 18px;border-radius:99px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
+a:focus-visible,.btn:focus-visible,nav a:focus-visible,a.tile:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:99px}
+.skip:focus-visible{outline-color:#fff;outline-offset:-5px}
+section[id]{scroll-margin-top:96px}
+main:focus{outline:none}
+
+footer{text-align:center;padding:4px 0 34px;color:var(--mute);font-size:14px}
+
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--st,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:760px){.hero-top{flex-direction:column-reverse;align-items:flex-start}.dp{width:170px;height:170px}}
+@media(max-width:640px){.hero{padding:26px 20px}section{padding:20px 16px}}
+@media print{.js h2 .hw>span{transform:none}.js .rv{opacity:1;transform:none}.floaters,.skip{display:none}.glass{backdrop-filter:none;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.js h2 .hw>span{transform:none!important;transition:none}.f,.twinkle,.hero::after,.dp,.w>span,.role .rot,.ticker-track,.hero .lead,.hero .btns{animation:none!important}.js .rv,.js [data-rv],.js .rv .chips li{opacity:1!important;transform:none!important;transition:none}.js .img-rv{clip-path:none;transition:none}html{scroll-behavior:auto}.ticker-track{width:auto;flex-wrap:wrap}.tclip{margin-right:12px}.ticker-set+.ticker-set{display:none}.tpause{display:none}}
+</style>
+</head>
+<body>
+
+<!-- cute icon library -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<g id="face"><circle cx="-8" cy="0" r="2.6" fill="#5b2740"/><circle cx="8" cy="0" r="2.6" fill="#5b2740"/><path d="M-5 5q5 5 10 0" fill="none" stroke="#5b2740" stroke-width="2" stroke-linecap="round"/><circle cx="-14" cy="5" r="3" fill="#ff9ec1" opacity=".7"/><circle cx="14" cy="5" r="3" fill="#ff9ec1" opacity=".7"/></g>
+
+<symbol id="bact" viewBox="0 0 100 100"><g fill="#ffc2da" stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M86 50q8-9 12 0" fill="none"/><path d="M14 50q-8 9-12 0" fill="none"/><rect x="12" y="28" width="76" height="44" rx="22"/></g><g transform="translate(50 50)"><use href="#face"/></g></symbol>
+
+<symbol id="petri" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round"><circle cx="50" cy="50" r="40" fill="#ffe3ee"/><circle cx="50" cy="50" r="32" fill="#ffc2da" stroke-dasharray="2 7"/></g><circle cx="30" cy="32" r="4" fill="#ff7eb0"/><circle cx="72" cy="66" r="5" fill="#ff7eb0"/><circle cx="66" cy="28" r="3" fill="#ff7eb0"/><g transform="translate(50 52)"><use href="#face"/></g></symbol>
+
+<symbol id="phage" viewBox="0 0 100 100"><g fill="#ffc2da" stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M50 6l27 15v27L50 63 23 48V21z"/><path d="M50 63v16" fill="none"/><rect x="38" y="79" width="24" height="7" rx="3"/><path d="M38 86l-14 10M50 86v11M62 86l14 10" fill="none"/></g><g transform="translate(50 34) scale(.85)"><use href="#face"/></g></symbol>
+
+<symbol id="flask" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8h16" fill="none"/><path d="M43 8v28L16 80q-5 14 9 14h50q14 0 9-14L57 36V8" fill="#fff"/><path d="M27 66h46l9 15q4 11-7 11H25q-11 0-7-11z" fill="#ff9ec1" stroke="none"/></g><circle cx="44" cy="50" r="3" fill="#ffc2da" stroke="#e0508a" stroke-width="2"/><circle cx="56" cy="40" r="2.2" fill="#ffc2da" stroke="#e0508a" stroke-width="2"/><g transform="translate(50 78) scale(.8)"><use href="#face"/></g></symbol>
+
+<symbol id="cocci" viewBox="0 0 100 100"><g fill="#ffc2da" stroke="#e0508a" stroke-width="3"><circle cx="34" cy="38" r="26"/><circle cx="72" cy="42" r="20"/><circle cx="52" cy="72" r="22"/></g><g transform="translate(34 40) scale(.8)"><use href="#face"/></g><g transform="translate(72 44) scale(.65)"><use href="#face"/></g><g transform="translate(52 74) scale(.7)"><use href="#face"/></g></symbol>
+
+<symbol id="scope" viewBox="0 0 100 100"><g fill="#ffc2da" stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="38" y="10" width="16" height="42" rx="6" transform="rotate(25 46 31)"/><path d="M58 38q22 6 18 30t-34 18" fill="none"/><rect x="22" y="84" width="56" height="8" rx="4"/><path d="M30 70h24" fill="none"/></g><g transform="translate(40 72) scale(.6)"><use href="#face"/></g></symbol>
+
+<symbol id="dna" viewBox="0 0 100 100"><g fill="none" stroke="#e0508a" stroke-width="3.5" stroke-linecap="round"><path d="M30 8c40 14-40 30 0 42s-40 30 0 42"/><path d="M70 8c-40 14 40 30 0 42s40 30 0 42" stroke="#ff7eb0"/><path d="M38 20h24M34 36h32M38 64h24M34 80h32" stroke-width="2.5"/></g></symbol>
+
+<symbol id="star" viewBox="0 0 100 100"><path d="M50 6q4 38 44 44-40 6-44 44-4-38-44-44 40-6 44-44z" fill="#ffe27a" stroke="#f0a800" stroke-width="3" stroke-linejoin="round"/></symbol>
+
+<symbol id="virus" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round"><path d="M77.0 50.0L89.0 50.0"/><circle cx="92.0" cy="50.0" r="3.6" fill="#ff9ec1"/><path d="M73.4 63.5L83.8 69.5"/><circle cx="86.4" cy="71.0" r="3.6" fill="#ff9ec1"/><path d="M63.5 73.4L69.5 83.8"/><circle cx="71.0" cy="86.4" r="3.6" fill="#ff9ec1"/><path d="M50.0 77.0L50.0 89.0"/><circle cx="50.0" cy="92.0" r="3.6" fill="#ff9ec1"/><path d="M36.5 73.4L30.5 83.8"/><circle cx="29.0" cy="86.4" r="3.6" fill="#ff9ec1"/><path d="M26.6 63.5L16.2 69.5"/><circle cx="13.6" cy="71.0" r="3.6" fill="#ff9ec1"/><path d="M23.0 50.0L11.0 50.0"/><circle cx="8.0" cy="50.0" r="3.6" fill="#ff9ec1"/><path d="M26.6 36.5L16.2 30.5"/><circle cx="13.6" cy="29.0" r="3.6" fill="#ff9ec1"/><path d="M36.5 26.6L30.5 16.2"/><circle cx="29.0" cy="13.6" r="3.6" fill="#ff9ec1"/><path d="M50.0 23.0L50.0 11.0"/><circle cx="50.0" cy="8.0" r="3.6" fill="#ff9ec1"/><path d="M63.5 26.6L69.5 16.2"/><circle cx="71.0" cy="13.6" r="3.6" fill="#ff9ec1"/><path d="M73.4 36.5L83.8 30.5"/><circle cx="86.4" cy="29.0" r="3.6" fill="#ff9ec1"/><circle cx="50" cy="50" r="27" fill="#ffc2da"/></g><g transform="translate(50 52)"><use href="#face"/></g></symbol>
+
+<symbol id="tube" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M34 8h32M38 8v62a12 12 0 0 0 24 0V8" fill="#fff"/><path d="M38 52h24v18a12 12 0 0 1-24 0z" fill="#ff9ec1" stroke="none"/></g><circle cx="46" cy="60" r="2.4" fill="#ffc2da" stroke="#e0508a" stroke-width="1.6"/><g transform="translate(50 36) scale(.7)"><use href="#face"/></g></symbol>
+
+<symbol id="pipette" viewBox="0 0 100 100"><g fill="#ffc2da" stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M42 6a8 8 0 0 1 16 0v24H42z"/><path d="M38 30h24v8H38z"/><path d="M42 38h16v34l-8 20-8-20z" fill="#fff"/><path d="M42 62h16v10l-8 20-8-20z" fill="#ff9ec1" stroke="none"/></g><g transform="translate(50 17) scale(.5)"><use href="#face"/></g></symbol>
+
+<symbol id="pill" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="32" width="80" height="36" rx="18" fill="#fff"/><path d="M50 32h-22a18 18 0 0 0 0 36h22z" fill="#ffc2da"/></g><g transform="translate(68 50) scale(.75)"><use href="#face"/></g></symbol>
+
+<symbol id="cell" viewBox="0 0 100 100"><g stroke="#e0508a" stroke-width="3" stroke-linecap="round"><path d="M16 52C10 24 44 8 70 16s26 40 10 58-52 16-64-22z" fill="#ffe3ee"/><circle cx="54" cy="44" r="15" fill="#ffc2da"/></g><circle cx="46" cy="70" r="3" fill="#ff9ec1"/><circle cx="28" cy="38" r="2.6" fill="#ff9ec1"/><g transform="translate(54 46) scale(.55)"><use href="#face"/></g></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="floaters" aria-hidden="true">
+ <svg class="f" style="--x:3%;--y:14%;--s:104px;--r:-10deg;--d:8s"><use href="#bact"/></svg>
+ <svg class="f" style="--x:88%;--y:8%;--s:110px;--r:8deg;--d:9s;--dl:-3s"><use href="#petri"/></svg>
+ <svg class="f" style="--x:92%;--y:44%;--s:100px;--r:-6deg;--d:7s;--dl:-1s"><use href="#phage"/></svg>
+ <svg class="f" style="--x:2%;--y:50%;--s:96px;--r:10deg;--d:10s;--dl:-5s"><use href="#flask"/></svg>
+ <svg class="f" style="--x:7%;--y:80%;--s:96px;--r:-8deg;--d:8.5s;--dl:-2s"><use href="#cocci"/></svg>
+ <svg class="f" style="--x:87%;--y:78%;--s:104px;--r:6deg;--d:9.5s;--dl:-4s"><use href="#scope"/></svg>
+ <svg class="f" style="--x:46%;--y:88%;--s:80px;--r:-4deg;--d:11s;--dl:-6s"><use href="#dna"/></svg>
+ <svg class="f" style="--x:72%;--y:62%;--s:64px;--r:-12deg;--d:8s;--dl:-1s"><use href="#bact"/></svg>
+ <svg class="f" style="--x:30%;--y:60%;--s:60px;--r:6deg;--d:9s;--dl:-3s"><use href="#petri"/></svg>
+ <svg class="f" style="--x:4%;--y:31%;--s:88px;--r:8deg;--d:9s;--dl:-2s"><use href="#virus"/></svg>
+ <svg class="f" style="--x:13%;--y:9%;--s:84px;--r:14deg;--d:8.5s;--dl:-4s"><use href="#pipette"/></svg>
+ <svg class="f" style="--x:94%;--y:24%;--s:90px;--r:-14deg;--d:10s;--dl:-1s"><use href="#tube"/></svg>
+ <svg class="f" style="--x:90%;--y:62%;--s:84px;--r:12deg;--d:9s;--dl:-5s"><use href="#pill"/></svg>
+ <svg class="f" style="--x:64%;--y:3%;--s:84px;--r:-6deg;--d:11s;--dl:-3s"><use href="#cell"/></svg>
+ <svg class="f" style="--x:78%;--y:90%;--s:72px;--r:10deg;--d:9.5s;--dl:-2s"><use href="#virus"/></svg>
+ <svg class="f" style="--x:22%;--y:88%;--s:78px;--r:-10deg;--d:10.5s;--dl:-6s"><use href="#tube"/></svg>
+ <svg class="f" style="--x:3%;--y:66%;--s:70px;--r:-8deg;--d:8s;--dl:-1s"><use href="#cell"/></svg>
+ <svg class="f twinkle" style="--x:16%;--y:30%;--s:34px;--dl:0s"><use href="#star"/></svg>
+ <svg class="f twinkle" style="--x:80%;--y:28%;--s:30px;--dl:-1.2s"><use href="#star"/></svg>
+ <svg class="f twinkle" style="--x:60%;--y:10%;--s:26px;--dl:-2s"><use href="#star"/></svg>
+ <svg class="f twinkle" style="--x:52%;--y:48%;--s:28px;--dl:-.6s"><use href="#star"/></svg>
+ <svg class="f twinkle" style="--x:96%;--y:92%;--s:30px;--dl:-1.8s"><use href="#star"/></svg>
+</div>
+
+<div class="progress" aria-hidden="true"></div>
+<div class="layer">
+<nav aria-label="Sections"><div class="bar glass"><b>Toshin Prottasha Zaman</b>
+<a href="#research">Research</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#presentations">Posters</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+
+<div class="wrap">
+<header class="hero glass rv">
+<div class="hero-top"><div>
+<h1><span class="w" style="--i:0"><span>Toshin</span></span> <span class="w" style="--i:1"><span>Prottasha</span></span> <span class="w" style="--i:2"><span>Zaman</span></span></h1>
+<p class="where">Dhaka, Bangladesh</p>
+<p class="role">Focused on <span class="rot" aria-hidden="true" data-words='["Clinical Microbiology","Antimicrobial Resistance","Bacteriophage Research","Biofilm Studies","Infectious Disease Research"]'>Clinical Microbiology</span><span class="sr">clinical microbiology, antimicrobial resistance, bacteriophage research, biofilm studies and infectious disease research.</span></p>
+<p class="lead">Microbiology graduate (BSc, North South University, 2026) focused on clinical microbiology, antimicrobial resistance and bacteriophage research. Seeking a research assistant or internship role in infectious disease and AMR research in Bangladesh.</p>
+<div class="btns"><a class="btn p" href="#contact">Get in touch</a><a class="btn" href="Toshin_Prottasha_Zaman_CV_web.pdf">Download CV (PDF)</a></div>
+</div>
+<div class="dp"><img src="images/dp.jpg" width="851" height="849" alt="Portrait of Toshin Prottasha Zaman" fetchpriority="high"></div>
+</div>
+</header>
+
+<div class="ticker glass rv" data-rv="zoom"><div class="tclip"><div class="ticker-track" aria-hidden="true"><div class="ticker-set"><span>Clinical Microbiology</span><i></i><span>Antimicrobial Resistance</span><i></i><span>MDR Klebsiella</span><i></i><span>Bacteriophage Research</span><i></i><span>Biofilm Assays</span><i></i><span>Antibiotic Susceptibility Testing</span><i></i><span>Phage Susceptibility Assays</span><i></i><span>Gram and Capsule Staining</span><i></i><span>Biosafety Practices</span><i></i></div><div class="ticker-set"><span>Clinical Microbiology</span><i></i><span>Antimicrobial Resistance</span><i></i><span>MDR Klebsiella</span><i></i><span>Bacteriophage Research</span><i></i><span>Biofilm Assays</span><i></i><span>Antibiotic Susceptibility Testing</span><i></i><span>Phage Susceptibility Assays</span><i></i><span>Gram and Capsule Staining</span><i></i><span>Biosafety Practices</span><i></i></div></div></div><button class="tpause" type="button" aria-pressed="false">Pause</button></div>
+
+<main id="main" tabindex="-1">
+
+
+<section id="research" class="glass rv"><h2>Research</h2>
+<div class="card k"><div class="split"><div><h3>Undergraduate Thesis Project, Clinical Microbiology</h3>
+<p class="meta">North South University | Supervisor: Dr. Fariza Shams, Associate Professor</p>
+<p style="margin:0"><b>A Comparison of Antibiotic and Phage Susceptibility in Planktonic and Biofilm-Derived Cells of Clinical <i>Klebsiella</i> spp.</b></p>
+<ul><li>Worked with multidrug-resistant (MDR) clinical bacterial isolates and bacteriophages.</li>
+<li>Compared antibiotic susceptibility and phage susceptibility in planktonic and biofilm-derived cells.</li>
+<li>Mentored and trained junior students, who shadowed my laboratory work under our supervisor.</li></ul></div>
+<figure class="img-rv"><img src="images/thesis.jpg" width="913" height="911" alt="Holding my bound undergraduate thesis report" loading="lazy" decoding="async"></figure></div></div></section>
+
+<section id="skills" class="glass rv"><h2>Technical Skills</h2>
+<div class="grid">
+<div class="card rv" data-rv="zoom"><h3>Antimicrobial Testing</h3><ul class="chips"><li>Antibiotic Susceptibility Testing</li><li>Antibiotic Assay by Diffusion</li><li>Phage Susceptibility Assays</li><li>Biofilm Assays</li></ul></div>
+<div class="card rv" data-rv="zoom" style="--st:.12s"><h3>Bacteriology and Phage Work</h3><ul class="chips"><li>Isolation and Extraction of Bacteriophage and Bacteria</li><li>Screening and Maintenance of Bacterial Organisms</li><li>Bacterial Culture</li><li>Sample Processing</li></ul></div>
+<div class="card rv" data-rv="zoom" style="--st:.24s"><h3>Staining, Microscopy and Lab Practice</h3><ul class="chips"><li>Gram Staining</li><li>Capsule Staining</li><li>Microscopy</li><li>Aseptic Technique</li><li>Biosafety Practices</li></ul></div>
+</div></section>
+
+<section id="education" class="glass rv"><h2>Education</h2>
+<div class="card k rv" data-rv="left"><h3>BSc in Microbiology</h3><p class="meta" style="margin:0">North South University, Dhaka | Feb 2021 – Nov 2026 | CGPA 3.22 / 4.00</p></div>
+<div class="card k rv" data-rv="right" style="--st:.1s"><h3>GCE Advanced Level (Cambridge Curriculum), 2020</h3><p class="meta" style="margin:0">Manarat Dhaka International School and College</p></div>
+<div class="card k rv" data-rv="left" style="--st:.2s"><h3>GCE Ordinary Level (Cambridge Curriculum), 2018</h3><p class="meta" style="margin:0">Manarat Dhaka International School and College</p></div>
+</section>
+
+<section id="presentations" class="glass rv"><h2>Poster Presentations at Conferences</h2>
+<div class="card k"><h3>Isolation and Characterization of Bacteriophages Against Multidrug-Resistant <i>Escherichia coli</i> and <i>Klebsiella</i> spp.</h3><p class="meta" style="margin:0 0 4px">Poster presentation | GNOBB, 2025</p><p class="authors">Authors: Toshin Prottasha Zaman, Khadizatul Kobra, Asifa Siddika Badhon, Maisha Manowara, Fouzia Ferdaus and Fariza Shams. Department of Biochemistry and Microbiology, School of Health and Life Sciences, North South University.</p><div class="photos two"><figure class="img-rv" style="--tilt:-1.2deg;flex:0.75 1 0"><img src="images/gnobb-poster.jpg" width="750" height="1000" alt="Presenting the bacteriophage poster at GNOBB 2025" loading="lazy" decoding="async"></figure><figure class="img-rv" style="--tilt:1.2deg;flex:1.177 1 0"><img src="images/gnobb-event.jpg" width="1000" height="849" alt="At the GNOBB 2025 poster session" loading="lazy" decoding="async"></figure></div></div>
+<div class="card k"><div class="split"><div><h3>Isolation and Characterization of Bacteriophages Against Multidrug-Resistant <i>Klebsiella</i> spp.</h3><p class="meta" style="margin:0 0 4px">Co-author, poster presentation | RU, 2025</p><p class="authors">Authors: Khadizatul Kobra, Asifa Siddika Badhon, Maisha Manowara, Toshin Prottasha, Fouzia Ferdaus and Fariza Shams. Department of Biochemistry and Microbiology, School of Health and Life Sciences, North South University.</p></div><figure class="img-rv"><img src="images/ru-poster.jpg" width="960" height="1280" alt="Standing beside the co-authored bacteriophage poster at the RU conference 2025" loading="lazy" decoding="async"></figure></div></div>
+</section>
+
+
+
+<section id="training" class="glass rv"><h2>Training</h2>
+<div class="card"><ul style="margin:0"><li>Biosafety Training, North South University</li><li>Beginner Bioinformatics (online course), National Institute of Biotechnology (NIB), Bangladesh</li></ul></div>
+</section>
+
+<section id="about" class="glass rv"><h2>About</h2>
+<p style="margin:0">My laboratory work centers on multidrug-resistant (MDR) bacteria and bacteriophages, a part of clinical microbiology. My thesis compared antibiotic and phage susceptibility in planktonic and biofilm-derived cells of clinical <i>Klebsiella</i> spp.</p></section>
+
+<section id="contact" class="glass rv"><h2>Contact</h2>
+<div class="contact">
+<div class="contact-lead">
+<p class="big">Open to internships and full&#8209;time job roles in Microbiology Labs.</p>
+<div class="btns"><a class="btn p" href="mailto:toshinzaman@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/toshin-zaman-64091b349/" target="_blank" rel="noopener">View LinkedIn</a></div>
+</div>
+<ul class="tiles">
+<li class="rv" data-rv="right"><a class="tile" href="mailto:toshinzaman@gmail.com"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 8 8 6 8-6"/></svg></span><span class="tx"><small>Email</small><b>toshinzaman@gmail.com</b></span><span class="go"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a></li>
+<li class="rv" data-rv="right" style="--st:.1s"><a class="tile" href="https://www.linkedin.com/in/toshin-zaman-64091b349/" target="_blank" rel="noopener"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 11v5M8 8v.01M12 16v-5m0 2.5c0-1.4 1-2.5 2.5-2.5S17 12 17 13.5V16"/></svg></span><span class="tx"><small>LinkedIn</small><b>linkedin.com/in/toshin-zaman-64091b349</b></span><span class="go"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a></li>
+<li class="rv" data-rv="right" style="--st:.2s"><div class="tile"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.800 12 21 12 21z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="tx"><small>Location</small><b>Dhaka, Bangladesh</b></span></div></li>
+</ul>
+</div></section>
+</main>
+<footer>&copy; 2026 Toshin Prottasha Zaman</footer>
+</div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var $=function(q,c){return Array.prototype.slice.call((c||document).querySelectorAll(q))};
+
+/* section headings: each word slides up out of a mask */
+$('h2').forEach(function(h){
+ var words=h.textContent.trim().split(/\s+/);h.textContent='';
+ words.forEach(function(w,i){
+  var m=document.createElement('span');m.className='hw';
+  var x=document.createElement('span');x.textContent=w;x.style.setProperty('--i',i);
+  m.appendChild(x);h.appendChild(m);if(i<words.length-1)h.appendChild(document.createTextNode(' '));
+ });
+});
+
+/* stagger cards and chips */
+$('.chips').forEach(function(ul){$('li',ul).forEach(function(li,i){li.style.setProperty('--c',i)})});
+
+/* reveal on scroll */
+var els=$('.rv'),imgs=$('.img-rv');
+function show(e){e.classList.add('in')}
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{threshold:.08});
+ els.forEach(function(el){io.observe(el)});
+ /* observe the figure's parent: a clipped element reports zero visibility and would never open */
+ var groups=new Map();
+ imgs.forEach(function(f){var par=f.parentElement;if(!groups.has(par))groups.set(par,[]);groups.get(par).push(f)});
+ var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){groups.get(e.target).forEach(function(f,i){setTimeout(function(){f.classList.add('in')},i*180)});io2.unobserve(e.target)}})},{threshold:.1});
+ groups.forEach(function(v,par){io2.observe(par)});
+}else{els.concat(imgs).forEach(function(el){el.classList.add('in')})}
+
+/* typing role line */
+var rot=$('.rot')[0];
+if(rot&&!reduce){
+ var words=JSON.parse(rot.dataset.words),i=0,j=0,del=false;
+ (function tick(){
+  var w=words[i];
+  if(!del){j++;rot.textContent=w.slice(0,j);if(j===w.length){del=true;return setTimeout(tick,1700)}return setTimeout(tick,75)}
+  j--;rot.textContent=w.slice(0,j);
+  if(j===0){del=false;i=(i+1)%words.length;return setTimeout(tick,350)}
+  setTimeout(tick,35);
+ })();
+ rot.textContent='';
+}
+
+/* ticker pause */
+var tk=$('.ticker')[0],tb=$('.tpause')[0];
+if(tk&&tb)tb.addEventListener('click',function(){var p=tk.classList.toggle('paused');tb.setAttribute('aria-pressed',p);tb.textContent=p?'Play':'Pause'});
+
+/* scroll: progress bar, sticky-nav shadow, drifting icons */
+var bar=$('.progress')[0],nav=$('nav')[0],icons=$('.floaters .f'),tick2=false;
+function onScroll(){
+ if(tick2)return;tick2=true;
+ requestAnimationFrame(function(){
+  var y=window.scrollY,max=document.documentElement.scrollHeight-innerHeight;
+  bar.style.transform='scaleX('+(max>0?Math.min(y/max,1):0)+')';
+  nav.classList.toggle('scrolled',y>10);
+  if(!reduce)icons.forEach(function(el,k){el.style.translate='0 '+(Math.sin(y/420+k*1.3)*26).toFixed(1)+'px'});
+  tick2=false;
+ });
+}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* nav highlights the section in view */
+var links=$('nav a[href^="#"]'),map={};
+links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+if('IntersectionObserver' in window){
+ var spy=new IntersectionObserver(function(es){es.forEach(function(e){
+  var a=map[e.target.id];if(!a)return;
+  if(e.isIntersecting){links.forEach(function(l){l.classList.remove('on');l.removeAttribute('aria-current')});a.classList.add('on');a.setAttribute('aria-current','true')}
+ })},{rootMargin:'-40% 0px -55% 0px'});
+ $('main section[id]').forEach(function(sec){spy.observe(sec)});
+}
+})();
+</script>
+</body>
+</html>
